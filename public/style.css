@@ -1,0 +1,27 @@
+#rbutton {
+    height: 40px;
+    width: 40px;
+    border-radius:30px;
+    border: 0;
+    align-content: center;
+    align-items: center;
+}
+
+#rbutton:hover {
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+#rbutton:active {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, .5);
+}
+
+tbody > tr:hover { 
+    background-color: rgb(245, 246, 255);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}

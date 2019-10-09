@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home Work 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="./index.js" defer></script>
+    <style>
+        .bs-example {
+            margin: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#myTab a").click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="bs-example">
+        <ul id="myTab" class="nav nav-pills">
+            <li class="nav-item">
+                <a href="#create" class="nav-link active">Create</a>
+            </li>
+            <li class="nav-item">
+                <a href="#read" class="nav-link">Read</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="create">
+                <h4 class="mt-2">Create worker</h4>
+                <form id='createForm'>
+                    <div class="form-group">
+                        <label for="cname">Name</label>
+                        <input type="text" class="form-control" id="cname" placeholder="Enter worker name">
+                    </div>
+                    <div class="form-group">
+                        <label for="cage">Age</label>
+                        <input type="number" class="form-control" id="cage" placeholder="Enter age">
+                    </div>
+                    <div class="form-group">
+                        <label for="csex">Gender</label>
+                        <select class='form-control' id='csex'>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cposition">Position</label>
+                        <input type="text" class="form-control" id="cposition" placeholder="Enter your position">
+                    </div>
+                    <button type="submit" id='cbutton' class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="read">
+                <h4 class="mt-2">All workers</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Position</th>
+                            <th scope="col"></th>
+                            <th scope="col">
+                                <button id='rbutton' class="btn btn-light">
+                                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                                </button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id='rTBody'>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Modal form-->
+    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Update worker information</h4>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <div class="form-group">
+                            <label for="uid">#</label>
+                            <input type="text" class="form-control" id="uid" disabled>
+                        </div>
+                    </div>
+                    <div class="md-form mb-5">
+                        <div class="form-group">
+                            <label for="uname">Name</label>
+                            <input type="text" class="form-control" id="uname" placeholder="Enter new name">
+                        </div>
+                    </div>
+                    <div class="md-form mb-5">
+                        <div class="form-group">
+                            <label for="uage">Age</label>
+                            <input type="number" class="form-control" id="uage" placeholder="Enter new age">
+                        </div>
+                    </div>
+                    <div class="md-form mb-5">
+                        <div class="form-group">
+                            <label for="usex">Gender</label>
+                            <select class='form-control' id='usex'>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="md-form">
+                        <div class="form-group">
+                            <label for="uposition">Position</label>
+                            <input type="text" class="form-control" id="uposition" placeholder="Enter new position">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="submit" id='ubutton' class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href=""> Timur Development</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
